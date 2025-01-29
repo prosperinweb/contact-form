@@ -1,10 +1,8 @@
-import {
-  MarketingConsent,
-  MessageInput,
-  Query,
-  SubmitButton,
-  TextInput,
-} from "../views";
+import Input from "../views/Input";
+import MarketingConsent from "../views/MarketingConsent";
+import MessageInput from "../views/MessageInput";
+import QueryList from "../views/QueryList";
+import SubmitButton from "../views/SubmitButton";
 
 const Main = () => {
   const queries = [
@@ -23,17 +21,19 @@ const Main = () => {
   ];
 
   return (
-    <main>
-      <h1>Contact Us</h1>
-      <form>
-        <TextInput type="text" label="First Name" name="first-name" />
-        <TextInput type="text" label="Last Name" name="last-name" />
-        <TextInput type="email" label="Email Address" name="email" />
-        <Query label="Query Type" name="query-type" queries={queries} />
+    <main className="flex flex-col gap-4 bg-white p-6 rounded-xl mx-auto w-full max-w-xl">
+      <h1 className="text-xl font-700">Contact Us</h1>
+      <form className="flex flex-col gap-4">
+        <div className="flex gap-4">
+          <Input type="text" label="First Name" name="first-name" />
+          <Input type="text" label="Last Name" name="last-name" />
+        </div>
+        <Input type="email" label="Email Address" name="email" />
+        <QueryList label="Query Type" queries={queries} />
         <MessageInput />
-        <MarketingConsent />
-        <SubmitButton />
       </form>
+      <MarketingConsent />
+      <SubmitButton />
     </main>
   );
 };

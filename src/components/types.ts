@@ -1,8 +1,6 @@
-export type QueryCategory = "general" | "support" | "feedback" | "enquiry";
-
 export interface QueryProps {
-  category: QueryCategory;
   value: string;
+  name: string;
 }
 export interface TextInputProps {
   type: string;

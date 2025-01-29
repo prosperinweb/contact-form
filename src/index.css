@@ -19,3 +19,13 @@
   --font-weight-400: 400;
   --font-weight-700: 700;
 }
+
+@layer base {
+  body {
+    font-family: var(--font-family-karla);
+    font-size: var(--font-size-16);
+    color: var(--color-grey-900);
+    background-color: var(--color-green-200);
+    accent-color: var(--color-green-600);
+  }
+}
