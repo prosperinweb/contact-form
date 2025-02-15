@@ -29,3 +29,9 @@
     accent-color: var(--color-green-600);
   }
 }
+
+input:user-invalid + .error-message {
+  opacity: 100%;
+  color: var(--color-red-500);
+  transition: opacity 0.3s;
+}
